@@ -11,24 +11,21 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 
 class Main extends PluginBase implements Listener {
+	private int $healthLimit;
 
 	protected function onEnable(): void {
-		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
-		if ($this->getHealthLimit() < 1) {
-			$this->getServer()->getLogger()->warning("healthLimit is not a positive number! 2 is used instead.");
-			unlink($this->getDataFolder() . "config.yml");
-			$this->saveDefaultConfig();
-			$this->getConfig()->reload();
+		$configuredLimit = $this->getConfig()->get("healthLimit", 2);
+		if (!is_int($configuredLimit) || $configuredLimit < 1) {
+			$this->getLogger()->warning("healthLimit must be a positive integer. Using 2 without changing config.yml.");
+			$configuredLimit = 2;
 		}
+		$this->healthLimit = $configuredLimit;
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
-	private function getHealthLimit() {
-		return $this->getConfig()->get("healthLimit", 2);
-	}
-
-	private function setHealth(Player $player) {
-		$player->setMaxHealth($this->getHealthLimit());
+	private function setHealth(Player $player): void {
+		$player->setMaxHealth($this->healthLimit);
 		$player->setHealth($player->getMaxHealth());
 	}
 
