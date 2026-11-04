@@ -1,8 +1,15 @@
 # HealthLimit
 
-HealthLimit sets a configurable maximum health for players when they join or respawn on an Axolotl-PM server.
+Set a configurable maximum health for players on Axolotl-PM
 
-[![Build and validate health limit plugin](https://github.com/NhanAZ-Plugins/HealthLimit/actions/workflows/build.yml/badge.svg)](https://github.com/NhanAZ-Plugins/HealthLimit/actions/workflows/build.yml)
+[![CI](https://github.com/NhanAZ-Plugins/HealthLimit/actions/workflows/build.yml/badge.svg)](https://github.com/NhanAZ-Plugins/HealthLimit/actions/workflows/build.yml)
+[![Latest release](https://img.shields.io/github/v/release/NhanAZ-Plugins/HealthLimit)](https://github.com/NhanAZ-Plugins/HealthLimit/releases/latest)
+[![License](https://img.shields.io/github/license/NhanAZ-Plugins/HealthLimit)](https://github.com/NhanAZ-Plugins/HealthLimit/blob/master/LICENSE)
+[![Discord](https://img.shields.io/discord/986553214889517088?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/j2X83ujT6c)
+
+## Overview
+
+This plugin targets the PocketMine-MP and Axolotl-PM API 5 ecosystem and is maintained under [NhanAZ-Plugins](https://github.com/NhanAZ-Plugins).
 
 ## Features
 
