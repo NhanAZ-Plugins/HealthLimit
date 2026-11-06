@@ -32,7 +32,7 @@ healthLimit: 2
 
 ## Build and development
 
-The [GitHub Actions workflow](.github/workflows/build.yml) uses [DevTools](https://github.com/NhanAZ/DevTools) to analyze the source at PHPStan level max, build the plugin PHAR and validate the artifact before upload. The workflow pins DevTools and the Axolotl-PM source to verified commits. Each uploaded artifact is tied to the triggering commit.
+The [GitHub Actions workflow](.github/workflows/build.yml) uses [DevTools](https://github.com/AxolotlBucketLabs/DevTools) to analyze the source at PHPStan level max, build the plugin PHAR and validate the artifact before upload. The workflow pins DevTools and the Axolotl-PM source to verified commits. Each uploaded artifact is tied to the triggering commit.
 
 For a local source check, run PHP lint and PHPStan against the Axolotl-PM API source required by the workflow. A successful static check does not replace a server runtime test of the PHAR.
 
